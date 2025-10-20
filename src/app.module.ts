@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UsuarioModule } from './usuario/usuario.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService, ConfigModule } from '@nestjs/config';
+import { TreinoModule } from './treino/treino.module';
 
 
 
@@ -29,6 +30,7 @@ import { ConfigService, ConfigModule } from '@nestjs/config';
      inject:[ConfigService],
    }),
    UsuarioModule,
+   TreinoModule,
  ],
  controllers: [AppController],
  providers: [AppService],
