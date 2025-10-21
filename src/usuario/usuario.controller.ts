@@ -1,7 +1,7 @@
 import { Body, Controller,Delete,Get,HttpCode,Param,Patch,Post } from '@nestjs/common';
 import { UsuarioService } from './usuario.service';
-import { UsuarioDto } from './dto/usuario.dto';
-import { Usuario } from './entity/usuario.entity';
+import { UsuarioDto } from '../dto/usuario.dto';
+import { Usuario } from '../entity/usuario.entity';
 
 
 @Controller('usuario')
