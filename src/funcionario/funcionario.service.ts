@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Funcionario } from './funcionario.entity';
-import { CreateFuncionarioDto } from './dto/create-funcionario.dto';
-import { UpdateFuncionarioDto } from './dto/update-funcionario.dto';
+import { Funcionario } from '../entity/funcionario.entity';
+import { CreateFuncionarioDto } from '../dto/create-funcionario.dto';
+import { UpdateFuncionarioDto } from '../dto/update-funcionario.dto';
 
 @Injectable()
 export class FuncionarioService {

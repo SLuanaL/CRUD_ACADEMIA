@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { TreinoService } from './treino.service';
-import { CreateTreinoDto } from './dto/create-treino.dto';
-import { UpdateTreinoDto } from './dto/update-treino.dto';
+import { CreateTreinoDto } from '../dto/create-treino.dto';
+import { UpdateTreinoDto } from '../dto/update-treino.dto';
 
 @Controller('treino')
 export class TreinoController {

@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Treino } from './treino.entity';
-import { CreateTreinoDto } from './dto/create-treino.dto';
-import { UpdateTreinoDto } from './dto/update-treino.dto';
+import { Treino } from '../entity/treino.entity';
+import { CreateTreinoDto } from '../dto/create-treino.dto';
+import { UpdateTreinoDto } from '../dto/update-treino.dto';
 
 @Injectable()
 export class TreinoService {

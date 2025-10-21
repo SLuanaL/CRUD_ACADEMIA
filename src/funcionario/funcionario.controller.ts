@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { FuncionarioService } from './funcionario.service';
-import { CreateFuncionarioDto } from './dto/create-funcionario.dto';
-import { UpdateFuncionarioDto } from './dto/update-funcionario.dto';
+import { CreateFuncionarioDto } from '../dto/create-funcionario.dto';
+import { UpdateFuncionarioDto } from '../dto/update-funcionario.dto';
 
 @Controller('funcionario')
 export class FuncionarioController {
