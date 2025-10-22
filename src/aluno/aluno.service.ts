@@ -1,6 +1,8 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Aluno } from './aluno.entity';
+import { CreateAlunoDto } from './dto/create-aluno.dto';
+import { UpdateAlunoDto } from './dto/update-aluno.dto';
 
 @Injectable()
 export class AlunoService {
@@ -13,11 +15,12 @@ export class AlunoService {
     return this.alunoRepository.find();
   }
 
-  async create(dados: Aluno): Promise<Aluno> {
-    return this.alunoRepository.save(dados);
+  async create(dados: CreateAlunoDto): Promise<Aluno> {
+    const aluno = this.alunoRepository.create(dados);
+    return this.alunoRepository.save(aluno);
   }
 
-  async update(id: number, dados: Aluno): Promise<Aluno> {
+  async update(id: number, dados: UpdateAlunoDto): Promise<Aluno> {
     await this.alunoRepository.update(id, dados);
     const aluno = await this.alunoRepository.findOneBy({ id });
     if (!aluno) {
